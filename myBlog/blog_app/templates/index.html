@@ -3,6 +3,6 @@
 {% block content %}
 {% for Post in all_posts %}
 <h1>{{Post.title}}</h1>
-<p>{{Post.content}}</p>
+<p>{{Post.content|truncatewords:5}}<a href="{% url 'single_post' Post.id %}">read more</a> </p>
 {% endfor %}
 {% endblock %}
